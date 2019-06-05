@@ -35,6 +35,9 @@
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="CsZ-FW-xuA" kind="show" id="RH4-j0-xW1"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GO ALL IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thu-mU-Kkq">
                                 <rect key="frame" x="58" y="165" width="259" height="70"/>
@@ -64,7 +67,6 @@
                             <constraint firstItem="qDZ-60-3L2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4M2-jv-Dt5"/>
                             <constraint firstItem="Waz-l3-3Gp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="66v-KI-ld0"/>
                             <constraint firstItem="0eP-Cw-bE1" firstAttribute="width" secondItem="VY8-WM-Pxy" secondAttribute="width" id="6A2-Mq-XO4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="19J-ab-itg" secondAttribute="bottom" constant="27" id="7Z4-KN-zS4"/>
                             <constraint firstItem="VY8-WM-Pxy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DYZ-jl-jfD"/>
                             <constraint firstItem="19J-ab-itg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="IKp-eH-9Vh"/>
                             <constraint firstItem="Waz-l3-3Gp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IZz-3s-9sE"/>
@@ -175,6 +177,17 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yeH-dv-n6W">
+                                <rect key="frame" x="25" y="10" width="29" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="29" id="Te6-UB-AtB"/>
+                                    <constraint firstAttribute="height" constant="24" id="UAl-Kj-i6A"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="3tk-Ya-e90" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="AzW-zq-meR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -183,8 +196,10 @@
                             <constraint firstItem="Olv-5e-Igw" firstAttribute="trailing" secondItem="Y8a-Jv-tNW" secondAttribute="trailing" id="BV8-O6-fhp"/>
                             <constraint firstItem="D0U-zM-Mry" firstAttribute="bottom" secondItem="Olv-5e-Igw" secondAttribute="bottom" id="C3Y-jk-2ea"/>
                             <constraint firstItem="Olv-5e-Igw" firstAttribute="trailing" secondItem="tCN-St-YsK" secondAttribute="trailing" constant="20" id="E8E-25-eqN"/>
+                            <constraint firstItem="yeH-dv-n6W" firstAttribute="leading" secondItem="Olv-5e-Igw" secondAttribute="leading" constant="25" id="PUF-1Y-wsb"/>
                             <constraint firstItem="D0U-zM-Mry" firstAttribute="top" secondItem="bwy-bN-ge6" secondAttribute="top" id="RiS-NS-KAx"/>
                             <constraint firstItem="D0U-zM-Mry" firstAttribute="leading" secondItem="Olv-5e-Igw" secondAttribute="leading" id="b4T-sB-00s"/>
+                            <constraint firstItem="yeH-dv-n6W" firstAttribute="top" secondItem="bwy-bN-ge6" secondAttribute="top" constant="10" id="bOY-Np-Y8s"/>
                             <constraint firstItem="tCN-St-YsK" firstAttribute="leading" secondItem="Olv-5e-Igw" secondAttribute="leading" constant="20" id="bRj-Uc-CSn"/>
                             <constraint firstItem="D0U-zM-Mry" firstAttribute="trailing" secondItem="Olv-5e-Igw" secondAttribute="trailing" id="cxX-r5-xcm"/>
                             <constraint firstItem="Y8a-Jv-tNW" firstAttribute="top" secondItem="Olv-5e-Igw" secondAttribute="top" constant="20" id="eak-IY-AOA"/>
@@ -196,6 +211,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="987-cy-HCf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="3tk-Ya-e90" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="852" y="135.38230884557723"/>
         </scene>
@@ -289,6 +305,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="29" height="24"/>
         <image name="beginnerBallerBG" width="414" height="736"/>
         <image name="desiredLeagueBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>
